@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ProfileCard, RepoCard } from './src';
+import { UserCard, RepoCard } from './src';
 
 class App extends React.Component {
   render() {
-    console.log('hehe', ProfileCard);
     return (
       <div id="root">
-        <ProfileCard user={'jkvim'} height="150" weight="400" />
-        <RepoCard repo={'jkvim/blog'} height="150" weight="400" />
+        <UserCard username={'jkvim'} theme="Medium" />
+        <RepoCard username={'jkvim'} repo={'blog'} theme="Medium" />
       </div>
     );
   }
