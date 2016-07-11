@@ -2,7 +2,7 @@
   show github profile card and repo card by the way of react compoent, inpired by [mamal72/react-github](https://github.com/mamal72/react-github) and [lepture](https://github.com/lepture/github-cards), you can choose theme of the card,  welcome to fork to custom your own theme or make a pull request.
 
 ## Install
-> npm install react-github-cards -S  
+      npm install react-github-cards -S  
   
 ## Usage
 ```jsx
