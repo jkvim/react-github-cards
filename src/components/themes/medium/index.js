@@ -77,7 +77,6 @@ class RepoCard extends React.Component {
         const response = await fetch(address);
         const repo = await response.json();
         this.setState({ repo });
-        console.log(repo);
       } catch (err) {
         console.error(err.message);
       }
