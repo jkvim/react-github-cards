@@ -4,7 +4,8 @@
     "name": "jkvim",
     "email": "jkvim@outlook.com"
   },
-  "version": "0.0.1",
+  "description": "React components of github cards",
+  "version": "1.0.0",
   "scripts": {
     "build": "webpack -p --config ./webpack.config.prod.js",
     "start": "webpack-dev-server --config ./webpack.config.dev.js",
@@ -34,5 +35,6 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.1"
-  }
+  },
+  "license": "MIT"
 }
