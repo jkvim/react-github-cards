@@ -1,14 +1,20 @@
 {
-  "name": "github-cards",
-  "repo": "lepture/github-cards",
-  "version": "1.0.2",
-  "files": {
-    "basePath": "jsdelivr"
+  "name": "react-github-cards",
+  "author": {
+    "name": "jkvim",
+    "email": "jkvim@outlook.com"
   },
+  "version": "0.0.1",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --hot "
+    "build": "webpack -p --config ./webpack.config.prod.js",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js",
+    "prepublish": "npm run build"
   },
+  "peerDependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "main": "./dist/react-github-card.min.js",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -28,11 +34,5 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.1"
-  },
-  "dependencies": {
-    "github": "^2.1.0",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
-    "react-github": "file:../react-github"
   }
 }
