@@ -18,7 +18,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  plugin: [
+  plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({url: 'http://localhost:8080'}),
     new webpack.DefinePlugin({
@@ -29,7 +29,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: 'babel',
         exclude: /node_modules/,
       },
       {
