@@ -5,7 +5,7 @@
     "email": "jkvim@outlook.com"
   },
   "description": "React components of github cards",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "build": "webpack -p --config ./webpack.config.prod.js",
     "start": "webpack-dev-server --config ./webpack.config.dev.js",
