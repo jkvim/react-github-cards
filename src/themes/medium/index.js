@@ -75,7 +75,6 @@ class RepoCard extends React.Component {
         const address = `${this.apiRoot}/${this.props.username}/${this.props.repo}`;
         const response = await fetch(address);
         const repo = await response.json();
-        console.log(repo);
         this.setState({ repo });
       } catch (err) {
         console.error(err.message);
@@ -90,8 +89,8 @@ class RepoCard extends React.Component {
       const repoName = this.state.repo.name;
       const user = this.state.repo.owner.login;
       const language = this.state.repo.language;
-      const forks_count = this.state.repo.forks_count;
-      const watchers_count = this.state.repo.forks_count;
+      const forks = this.state.repo.forks_count;
+      const stars = this.state.repo.stargazers_count;
       return (
         <div className="medium-theme">
           <div className="github-card repo-card">
@@ -103,8 +102,8 @@ class RepoCard extends React.Component {
             <div className="content">
               <p>{this.state.repo.description}</p>
               <ul className="status">
-                <li><strong>{forks_count}</strong>Forks</li>
-                <li><strong>{watchers_count}</strong>Stars</li>
+                <li><strong>{forks}</strong>Forks</li>
+                <li><strong>{stars}</strong>Stars</li>
               </ul>
             </div>
           </div>
