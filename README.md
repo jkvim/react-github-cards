@@ -8,16 +8,20 @@
 ```jsx
 import { UserCard, RepoCard } from 'react-github-cards';
 
+// use medium theme
+// import { UserCard, RepoCard } from 'react-github-cards/dist/medium'
+
+
 render() {
   <div>
-    <UserCard username="foo" theme="medium"/>
-    <RepoCard username="foo" repo="bar" theme="medium"/>
+    <UserCard username="foo" />
+    <RepoCard username="foo" repo="bar" />
   </div>
 }
 ```
 
 ## themes
-  currently, just have two kinds of themes, `default` and `medium`.
+  currently, just have two kinds of themes, `default` and `medium`. 
 
 ## compoenents
 - `<UserCard />`
@@ -25,7 +29,6 @@ render() {
 |props   | required| value |
 |--------|---------|-------|
 |username| yes     | string|
-|theme   | no      | theme |
 
 - `<RepoCard />`
 
@@ -33,7 +36,6 @@ render() {
 |--------|---------|-------|
 |username| yes     | string|
 |repo    | yes     | string|
-|theme   | no      | theme |
 
 
 ## Licence
