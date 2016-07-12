@@ -118,25 +118,18 @@ body {
     width: 33%;
   }
 
-  .repo-card .avatar {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    border: 2px solid #fff;
+  .repo-card .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .repo-card .avatar img {
-    display: block;
-    width: 48px;
-    height: 48px;
-  }
+
   .repo-card h1 {
     margin: 0;
     padding: 0;
-    line-height: 148px;
     color: white;
     font-size: 36px;
     font-weight: 400;
-    text-transform: uppercase;
   }
   .repo-card h1 a {
     color: white;

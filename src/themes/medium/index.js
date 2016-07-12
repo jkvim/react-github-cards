@@ -75,6 +75,7 @@ class RepoCard extends React.Component {
         const address = `${this.apiRoot}/${this.props.username}/${this.props.repo}`;
         const response = await fetch(address);
         const repo = await response.json();
+        console.log(repo);
         this.setState({ repo });
       } catch (err) {
         console.error(err.message);
@@ -84,7 +85,6 @@ class RepoCard extends React.Component {
 
   render() {
     if (this.state.repo) {
-      const avatar_url = this.state.repo.owner.avatar_url + '&s=48';
       const profileUrl = this.state.repo.owner.html_url;
       const repoUrl = this.state.repo.html_url;
       const repoName = this.state.repo.name;
@@ -96,9 +96,6 @@ class RepoCard extends React.Component {
         <div className="medium-theme">
           <div className="github-card repo-card">
             <div className={`header ${language}`}>
-              <a className="avatar" href={profileUrl}>
-                <img src={avatar_url} alt={user}/>
-              </a>
               <h1>
                 <a href={repoUrl}>{repoName}</a>
               </h1>
