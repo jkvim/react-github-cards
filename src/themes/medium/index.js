@@ -89,9 +89,7 @@ class RepoCard extends React.Component {
       const repoUrl = this.state.repo.html_url;
       const repoName = this.state.repo.name;
       const user = this.state.repo.owner.login;
-      const action = this.state.repo.fork ? 'Forked By': 'Created By';
       const language = this.state.repo.language;
-      const description = this.state.repo.description || 'No description';
       const forks_count = this.state.repo.forks_count;
       const watchers_count = this.state.repo.forks_count;
       return (
@@ -99,7 +97,7 @@ class RepoCard extends React.Component {
           <div className="github-card repo-card">
             <div className={`header ${language}`}>
               <a className="avatar" href={profileUrl}>
-                <img src={avatar_url} alt={this.props.username}/>
+                <img src={avatar_url} alt={user}/>
               </a>
               <h1>
                 <a href={repoUrl}>{repoName}</a>

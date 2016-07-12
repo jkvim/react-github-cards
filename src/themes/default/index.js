@@ -107,7 +107,7 @@ class RepoCard extends React.Component {
               <a className="button" href={repoUrl}>Star</a>
             </div>
             <div className="content">
-              {this.state.repo.description}
+              {description}
             </div>
             <div className="footer">
               <span className="status">
