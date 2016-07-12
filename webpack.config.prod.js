@@ -1,32 +1,29 @@
 "use strict";
 const libraryName = 'react-github-cards';
 const webpack = require('webpack');
-const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'default':'./src/themes/default',
+    'medium' :'./src/themes/medium',
+  },
   output: {
     path: 'dist',
     library: libraryName,
-    filename: libraryName + '.min.js',
+    filename: "[name].js",
     libraryTarget: 'umd',
   },
-  resolve: {
-    alias: {
-      lodash: 'lodash/lodash.min.js'
-    }
-  },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true
-    }),
+   new webpack.optimize.UglifyJsPlugin({
+     minimize: true,
+     compress: {
+       warnings: false
+     }
+   }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new LodashModuleReplacementPlugin({
-      get: true
-    }),
   ],
   module: {
     loaders: [
