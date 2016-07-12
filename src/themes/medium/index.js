@@ -31,7 +31,7 @@ class UserCard extends React.Component {
       const profileUrl = this.state.user.html_url;
       const gistUrl = `https://gist.github.com/${username}`;
       const followersUrl = `${profileUrl}/followers`;
-      const repositoriesUrl = `${profileUrl}/tab=repositories`;
+      const repositoriesUrl = `${profileUrl}/repositories`;
 
       return (
         <div className="medium-theme">
