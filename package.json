@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack -p --config ./webpack.config.prod.js",
     "start": "webpack-dev-server --config ./webpack.config.dev.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "depoly": "gulp depoly"
   },
   "peerDependencies": {
     "react": "^15.1.0",
@@ -25,6 +26,9 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
     "node-sass": "^3.8.0",
     "open-browser-webpack-plugin": "0.0.2",
     "sass-loader": "^4.0.0",
@@ -33,7 +37,8 @@
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
-    "webpack-hot-middleware": "^2.12.1"
+    "webpack-hot-middleware": "^2.12.1",
+    "webpack-stream": "^3.2.0"
   },
   "license": "MIT"
 }
