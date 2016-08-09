@@ -6,7 +6,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports = {
   entry: ['webpack-hot-middleware/client', './example/index.js'],
   output: {
-    filename: 'react-github-card.js'
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   devServer: {
