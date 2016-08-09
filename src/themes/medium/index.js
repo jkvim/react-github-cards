@@ -88,13 +88,12 @@ class RepoCard extends React.Component {
       const repoUrl = this.state.repo.html_url;
       const repoName = this.state.repo.name;
       const user = this.state.repo.owner.login;
-      const language = this.state.repo.language;
       const forks = this.state.repo.forks_count;
       const stars = this.state.repo.stargazers_count;
       return (
         <div className="medium-theme">
           <div className="github-card repo-card">
-            <div className={`header ${language}`}>
+            <div className={`header`}>
               <h1>
                 <a href={repoUrl}>{repoName}</a>
               </h1>
