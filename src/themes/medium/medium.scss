@@ -122,6 +122,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f9c969;
   }
 
   .repo-card h1 {
@@ -149,35 +150,5 @@ body {
   }
   .repo-card .status li {
     width: 50%;
-  }
-  .repo-card .C {
-    background: #555;
-  }
-  .repo-card .CSS {
-    background: #563d7c;
-  }
-  .repo-card .HTML {
-    background: #e44b23;
-  }
-  .repo-card .JavaScript {
-    background: #f9c969;
-  }
-  .repo-card .Python {
-    background: #3581ba;
-  }
-  .repo-card .Ruby {
-    background: #701516;
-  }
-  .repo-card .Rust {
-    background: #dea584;
-  }
-  .repo-card .Go {
-    background: #375eab;
-  }
-  .repo-card .Java {
-    background: #b07219;
-  }
-  .repo-card .Objective-C {
-    background: #438eff;
   }
 }
