@@ -4,12 +4,13 @@ const webpack = require('webpack');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-  entry: ['webpack-hot-middleware/client', './index.js'],
+  entry: ['webpack-hot-middleware/client', './example/index.js'],
   output: {
     filename: 'react-github-card.js'
   },
   devtool: 'source-map',
   devServer: {
+    contentBase: './example',
     hot: true,
     inline: true,
     progress: true,
