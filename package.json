@@ -16,6 +16,11 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "github"
+  ],
   "main": "./dist/default.js",
   "devDependencies": {
     "babel-core": "^6.10.4",
