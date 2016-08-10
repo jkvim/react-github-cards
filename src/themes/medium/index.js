@@ -42,7 +42,9 @@ class UserCard extends React.Component {
               </a>
             </div>
             <div className="content">
-              <h1>{username}</h1>
+              <div className="description">
+                <h1>{username}</h1>
+              </div>
               <ul className="status">
                 <li><a href={repositoriesUrl}><strong>{this.state.user.public_repos} </strong>Repos</a></li>
                 <li><a href={gistUrl}><strong>{this.state.user.public_gists} </strong>Gist</a></li>
@@ -99,7 +101,7 @@ class RepoCard extends React.Component {
               </h1>
             </div>
             <div className="content">
-              <p>{this.state.repo.description}</p>
+              <div className="description">{this.state.repo.description}</div>
               <ul className="status">
                 <li><strong>{forks}</strong>Forks</li>
                 <li><strong>{stars}</strong>Stars</li>
