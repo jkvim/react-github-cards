@@ -31,6 +31,7 @@
     "gulp-gh-pages": "^0.5.4",
     "node-sass": "^3.8.0",
     "open-browser-webpack-plugin": "0.0.2",
+    "react-autobind": "^1.0.6",
     "sass-loader": "^4.0.0",
     "scss-loader": "0.0.1",
     "style-loader": "^0.13.1",

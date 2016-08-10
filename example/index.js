@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as Medium from '../src/themes/medium';
 import * as Default from '../src/themes/default';
+import autoBind from 'react-autobind';
 import './index.scss';
 
 class App extends React.Component {
@@ -17,9 +18,7 @@ class App extends React.Component {
       'default': Default,
       'medium': Medium
     };
-    this.onThemeChange = this.onThemeChange.bind(this);
-    this.onSetState = this.onSetState.bind(this);
-    this.onResetState = this.onResetState.bind(this);
+    autoBind(this);
   }
   onThemeChange(evt) {
     this.setState({
