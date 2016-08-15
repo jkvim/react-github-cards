@@ -6,13 +6,10 @@
   
   .github-card {
     text-align: center;
-    border-radius: 5px;
     background: #fff;
     color: #555;
     position: relative;
-    border: 1px solid #eee;
     border-radius: 5px;
-    border-color: #eee #ddd #bbb;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 3px;
 
     .header {
@@ -31,6 +28,9 @@
       .description {
         line-height: 54px;
         height: 54px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 0 10px;
         h1 {
           margin: 0;
           line-height: inherit;
@@ -67,7 +67,6 @@
       margin: 0;
       padding: 0;
       border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
       zoom: 1;
     }
     ul:after {
