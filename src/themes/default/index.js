@@ -90,7 +90,6 @@ class RepoCard extends React.Component {
       const repoName = this.state.repo.name;
       const user = this.state.repo.owner.login;
       const action = this.state.repo.fork ? 'Forked By': 'Created By';
-      const language = this.state.repo.language;
       const description = this.state.repo.description || 'No description';
       return (
         <div className="default-theme">
@@ -101,7 +100,6 @@ class RepoCard extends React.Component {
               </a>
               <strong className="name">
                 <a href={repoUrl}>{repoName}</a>
-                <sup className="language">{language}</sup>
               </strong>
               <span>{action}<a href={profileUrl}> {user} </a></span>
               <a className="button" href={repoUrl}>Star</a>
