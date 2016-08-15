@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   position: absolute;
   background: #41c46f;
@@ -5,6 +10,7 @@
   height: 100vh;
   text-align: center;
   font-family: Ubuntu;
+  overflow: scroll;
 
   >h1 {
     color: #FFF;
