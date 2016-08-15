@@ -1,14 +1,8 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-family: "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
-  overflow: hidden;
-}
-
 .medium-theme {
   display: inline-block;
   vertical-align: middle;
+  font-size: 14px;
+  font-family: "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
   
   .github-card {
     text-align: center;
@@ -142,20 +136,20 @@ body {
       align-items: center;
       background: #f9c969;
     }
-
     h1 {
       margin: 0;
       padding: 0;
       color: white;
       font-size: 36px;
       font-weight: 400;
-    }
-    h1 a {
+
+      a {
       color: white;
       text-decoration: none;
-    }
-    h1 a:hover {
-      opacity: 0.8;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
     }
     p a {
       text-decoration: none;

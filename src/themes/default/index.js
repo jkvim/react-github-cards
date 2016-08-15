@@ -104,17 +104,11 @@ class RepoCard extends React.Component {
               <span>{action}<a href={profileUrl}> {user} </a></span>
               <a className="button" href={repoUrl}>Star</a>
             </div>
-            <div className="content">
-              {description}
-            </div>
-            <div className="footer">
-              <span className="status">
-                <strong>{this.state.repo.forks_count}</strong> Fork
-              </span>
-              <span className="status">
-                <strong>{this.state.repo.watchers_count}</strong> Stars
-              </span>
-            </div>
+            <div className="content">{description}</div>
+            <ul className="status">
+              <li><strong>{this.state.repo.forks_count}</strong> Fork </li>
+              <li><strong>{this.state.repo.watchers_count}</strong> Stars </li>
+            </ul>
           </div>
         </div>
       );
