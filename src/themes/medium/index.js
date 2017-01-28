@@ -14,7 +14,10 @@ class UserCard extends React.Component {
   componentDidMount() {
     (async () => {
       try {
-        const address = `${this.apiRoot}/${this.props.username}`;
+        let address = `${this.apiRoot}/${this.props.username}`;
+        if (this.props.clientId && this.props.clientSecret) {
+            address += `?client_id=${this.props.clientId}&client_secret=${this.props.clientSecret}`
+        }
         const response = await fetch(address);
         const user = await response.json();
         this.setState({ user });
@@ -74,7 +77,10 @@ class RepoCard extends React.Component {
   componentDidMount() {
     (async () => {
       try {
-        const address = `${this.apiRoot}/${this.props.username}/${this.props.repo}`;
+        let address = `${this.apiRoot}/${this.props.username}/${this.props.repo}`;
+        if (this.props.clientId && this.props.clientSecret) {
+            address += `?client_id=${this.props.clientId}&client_secret=${this.props.clientSecret}`
+        }
         const response = await fetch(address);
         const repo = await response.json();
         this.setState({ repo });
