@@ -1,6 +1,5 @@
 "use strict";
 import React from 'react';
-import "regenerator-runtime/runtime";
 import './default.scss';
 
 
@@ -10,7 +9,7 @@ class UserCard extends React.Component {
     this.apiRoot = 'https://api.github.com/users';
     this.state = {};
   }
-  
+
   componentDidMount() {
     (async () => {
       try {

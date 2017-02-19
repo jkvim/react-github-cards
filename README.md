@@ -9,9 +9,11 @@
 ## Usage
 ```jsx
 import { UserCard, RepoCard } from 'react-github-cards';
+import 'react-github-cards/dist/default.css';
 
 // use medium theme
 // import { UserCard, RepoCard } from 'react-github-cards/dist/medium'
+import 'react-github-cards/dist/medium.css';
 
 
 render() {

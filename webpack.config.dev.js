@@ -16,9 +16,6 @@ module.exports = {
     progress: true,
     port: 8080
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({url: 'http://localhost:8080'}),
@@ -27,15 +24,15 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.scss?/,
-        loader: 'style!css!sass'
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   }
