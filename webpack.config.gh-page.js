@@ -1,33 +1,35 @@
 "use strict";
 
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  module: {
-    loaders: [
-    {
-      test: /.js$/,
-      loader: 'babel',
-      exclude: /node_modules/
+    module: {
+        rules: [
+            {
+                test: /.js$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.scss?/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
+            }
+        ]
     },
-    {
-      test: /.scss$/,
-      loader: 'style!css!sass'
-    }
+    output: {
+        filename: 'bundle.js'
+    },
+    plugins: [
+        new ExtractTextPlugin({filename: '[name].css'}),
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            compress: {
+                warnings: false
+            }
+        }),
     ]
-  },
-  output: {
-    filename: 'bundle.js'
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-        warnings: false
-      }
-    }),
-  ]
 };
